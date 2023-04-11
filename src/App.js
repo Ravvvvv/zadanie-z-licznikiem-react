@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Heding from './Heding';
+import Counter from './Components/Counter';
+import Display from './Components/Display';
+
+
+
 function App() {
+  //stan czyli hook uzywamy zawsze kiedy informacja moze sie zmieniac w toku dzialania. 
   return (
+
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Heding text='react  zwiesil sie mi' />
       </header>
+
+      <Counter stala={8} />
+      {/* dowolny typ danych moze byc przekazany przez propsy  tablica ,ture ,wartos logiczna liczbowa,obiekt */}
+      <Counter stala={108} />
+
     </div>
   );
 }
